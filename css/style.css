@@ -1,0 +1,64 @@
+/* UTILITY CLASS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.left-floated {
+  float: left;
+}
+/* end UTILITY CLASS */
+
+.page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.side-main-container {
+  height: calc(100% - 80px);
+}
+
+/* Sidebar */
+nav {
+  background-color: #000;
+  color: white;
+  width: 200px;
+  height: 100%;
+  overflow-y: auto;
+}
+/* end Sidebar */
+
+.main-wrapper {
+  width: calc(100% - 200px);
+  height: 100%;
+}
+
+/* Barra superiore */
+header {
+  background-color: #080B12;
+  height: 80px;
+}
+/* end Barra superiore */
+
+/* Sezione principale */
+main {
+  background-color: #141922;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+/* end Sezione principale */
+
+/* Sezione In riproduzione */
+footer {
+  background-color: #282828;
+  height: 80px;
+}
+/* end Sezione In riproduzione */
