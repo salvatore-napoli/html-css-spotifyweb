@@ -19,16 +19,24 @@
   list-style-type: none;
 }
 
+.no-decoration-link {
+  text-decoration: none;
+}
+
 .pad-15 {
   padding: 15px;
 }
 
-.pad-top-10 {
-  padding-top: 10px;
+.pad-top-5 {
+  padding-top: 5px;
 }
 
 .pad-top-15 {
   padding-top: 15px;
+}
+
+.mar-bot-7 {
+  margin-bottom: 7px;
 }
 
 .text-white {
@@ -43,12 +51,20 @@
   text-align: center;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .font-10 {
   font-size: 10px;
 }
 
 .font-11 {
   font-size: 11px;
+}
+
+h2 {
+  font-size: 17px;
 }
 /* end UTILITY CLASS */
 
@@ -76,6 +92,18 @@ nav .spotify-logo {
 
 nav .spotify-logo img {
   height: 100%;
+}
+
+.nav-top > #spotify-nav ul li:first-child:before,
+.nav-top > #spotify-nav ul li:active:before {
+  content: '';
+  display: block;
+  height: 27px;
+  background-color: #ADFF2F;
+  width: 2px;
+  position: absolute;
+  left: 0;
+  transform: translate(0, -4px);
 }
 
 .nav-top > #spotify-nav ul .spotify-nav-img {
@@ -132,10 +160,11 @@ nav > #profile .app-install:after {
 }
 
 nav > #profile .app-install .install-icon {
-  height: 10px;
+  height: 11px;
   display: inline-block;
   line-height: 10px;
   vertical-align: middle;
+  margin-right: 4px;
 }
 
 nav > #profile .app-install .install-icon img {
@@ -155,6 +184,7 @@ nav > #profile .account .profile-icon {
   border-radius: 50%;
   background-image: url('../img/profile.svg');
   background-size: cover;
+  margin-right: 4px;
 }
 /* end Sidebar */
 
@@ -181,24 +211,59 @@ header .upgrade-button {
   font-size: 12px;
   position: fixed;
 }
-
-header .upgrade-button a {
-  text-decoration: none;
-}
 /* end Barra superiore */
 
-/* Sezione principale */
 main {
   background-color: #141922;
   height: calc(100% - 80px);
   overflow-y: auto;
 }
-/* end Sezione principale */
 
-/* Sezione In riproduzione */
+main > .main-navigation li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+main > .main-navigation li:first-child:after {
+  content: '';
+  display: block;
+  background-color: #ADFF2F;
+  height: 2px;
+  width: 40%;
+  margin: 1px auto 0;
+}
+
+/* Sezione Recent */
+main > #recent .recent-items {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+main > #recent .recent-items .recent-item {
+  width: calc(100% / 6 - 10px);
+  display: inline-block;
+}
+
+main > #recent .recent-items .recent-item:last-child {
+  padding-right: 10px;
+}
+
+main > #recent .recent-items .recent-item .recent-item-img img {
+  width: 100%;
+  height: auto;
+}
+
+main > #recent .recent-items .recent-item .recent-item-img-description {
+  max-width: 190px;
+  margin: 0 auto;
+}
+/* end Sezione Recent */
+
+/* Player */
 footer {
   background-color: #282828;
   height: 80px;
   padding: 10px;
 }
-/* end Sezione In riproduzione */
+/* end Player */

@@ -12,97 +12,186 @@
   <body>
     <div class="page-wrapper">
 
-        <nav class="left-floated pad-15">
-          <div class="nav-top">
-            <div class="spotify-logo">
-              <img src="img/logo.svg" alt="logo spotify" />
-            </div>
+      <nav class="left-floated pad-15">
+        <div class="nav-top">
+          <div class="spotify-logo">
+            <img src="img/logo.svg" alt="logo spotify" />
+          </div>
 
-            <section id="spotify-nav">
-              <ul class="no-bullet-list">
-                <li class="font-10 text-grey">
+          <section id="spotify-nav">
+            <ul class="no-bullet-list">
+              <li>
+                <a href="#" class="no-decoration-link text-white text-bold font-10">
                   <div class="spotify-nav-img">
                     <img src="img/home.svg" alt="logo home" />
                   </div>
-                  Home
-                </li>
-                <li class="font-10 text-grey pad-top-10">
+                Home
+                </a>
+              </li>
+              <li class="pad-top-5">
+                <a href="#" class="no-decoration-link text-grey text-bold font-10">
                   <div class="spotify-nav-img">
                     <img src="img/search.svg" alt="logo search" />
                   </div>
-                  Cerca
-                </li>
-                <li class="font-10 text-grey pad-top-10">
+                Cerca
+                </a>
+              </li>
+              <li class="pad-top-5">
+                <a href="#" class="no-decoration-link text-grey text-bold font-10">
                   <div class="spotify-nav-img">
                     <img src="img/libreria.svg" alt="logo libreria" />
                   </div>
-                  La tua libreria
-                </li>
-              </ul>
-            </section>
+                La tua libreria
+                </a>
+              </li>
+            </ul>
+          </section>
 
-            <section id="playlist-nav">
-              <h3 class="text-white pad-top-15">PLAYLIST</h3>
-              <div class="text-grey font-11 pad-top-10">
+          <section id="playlist-nav">
+            <h3 class="text-white pad-top-15">PLAYLIST</h3>
+            <a href="#" class="no-decoration-link">
+              <div class="text-grey text-bold font-11 pad-top-5">
                 <div class="playlist-add text-center">
                   <div></div>
                   <div></div>
                 </div>
-                Crea playlist
+                <span>Crea playlist</span>
               </div>
-              <ul class="no-bullet-list">
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-                <li class="text-grey font-10 pad-top-10">Nome playlist</li>
-              </ul>
-            </section>
-          </div>
+            </a>
+
+            <ul class="no-bullet-list">
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+              <li class="pad-top-5"><a href="#" class="no-decoration-link text-grey text-bold font-10">Nome playlist</a></li>
+            </ul>
+          </section>
+        </div>
 
 
-          <section id="profile">
-            <div class="app-install">
+        <section id="profile">
+          <div class="app-install">
+            <a href="#" class="text-grey text-bold no-decoration-link font-10">
               <div class="install-icon">
                 <img src="img/download.svg" alt="icona scarica" />
               </div>
-              <span class="text-grey font-10">Installa app</span>
-            </div>
+              Installa app
+            </a>
+          </div>
 
-            <div class="account">
-              <div class="profile-icon">
-              </div>
+          <div class="account">
+            <div class="profile-icon"></div>
               <span class="text-white font-11">John Doe</span>
             </div>
 
+        </section>
+
+      </nav>
+
+      <div class="main-wrapper left-floated">
+
+        <!-- Barra superiore -->
+        <header class="pad-15">
+          <a href="#" class="upgrade-button text-center no-decoration-link">
+            <span class="text-white">EFFETTUA L'UPGRADE</span>
+          </a>
+        </header>
+        <!-- end Barra superiore -->
+
+        <main class="pad-15">
+          <ul class="main-navigation text-center">
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">IN EVIDENZA</a></li>
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">PODCAST</a></li>
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">CLASSIFICHE</a></li>
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">GENERI E MOOD</a></li>
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">NUOVE USCITE</a></li>
+            <li><a href="#" class="text-grey no-decoration-link text-bold font-11">SCOPRI</a></li>
+          </ul>
+
+          <!-- Sezione Recent -->
+          <section id="recent">
+            <h2 class="text-white">Recently played</h2>
+
+            <div class="recent-items">
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/metal_lifting.jpg" alt="canzoni metal" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">Heavy Metal</h3>
+                  <h4 class="text-grey font-10">Subtitle</h4>
+                </div>
+              </div>
+
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/stranger.jpeg" alt="stranger things" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                  <h4 class="text-grey font-10">Kyle Dixon & Michael Stein</h4>
+                </div>
+              </div>
+
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/aquietplace.jpeg" alt="a quiet place" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">A quiet place</h3>
+                  <h4 class="text-grey font-10">Subtitle</h4>
+                </div>
+              </div>
+
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/split.jpeg" alt="split" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">Split</h3>
+                  <h4 class="text-grey font-10">Subtitle</h4>
+                </div>
+              </div>
+
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/cure.jpeg" alt="cure" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">A cure for wellness</h3>
+                  <h4 class="text-grey font-10">Subtitle</h4>
+                </div>
+              </div>
+
+              <div class="recent-item text-center">
+                <div class="recent-item-img mar-bot-7">
+                  <img src="img/sinister.jpeg" alt="sinister" />
+                </div>
+                <div class="recent-item-img-description">
+                  <h3 class="text-white font-11 mar-bot-7">Sinister</h3>
+                  <h4 class="text-grey font-10">Subtitle</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end Sezione Recent -->
+
+          <section id="personalized">
+
           </section>
 
-        </nav>
+        </main>
 
-        <div class="main-wrapper left-floated">
+      </div>
 
-          <!-- Barra superiore -->
-          <header class="pad-15">
-            <div class="upgrade-button text-center">
-              <a href="#top" class="text-white">EFFETTUA L'UPGRADE</a>
-            </div>
-          </header>
-          <!-- end Barra superiore -->
-
-          <!-- Sezione Principale -->
-          <main class="pad-15">
-          </main>
-          <!-- end Sezione Principale -->
-
-        </div>
-
-      <!-- Sezione In riproduzione -->
+      <!-- Player -->
       <footer class="left-floated">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </footer>
-      <!-- end Sezione In riproduzione -->
+      <!-- end Player -->
 
     </div>
   </body>
