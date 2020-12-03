@@ -83,6 +83,10 @@
   font-weight: bold;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .font-8 {
   font-size: 8px;
 }
@@ -111,6 +115,10 @@ img {
   display: flex;
 }
 
+.white-hover:hover {
+  color: white;
+}
+
 .main-item {
   width: calc(100% / 6 - 10px)
 }
@@ -129,16 +137,33 @@ img {
   display: none;
 }
 
+.item-img:hover .start-playing {
+  display: block;
+}
+
 .big-play-icon {
   font-size: 60px;
 }
 
-.item-description {
-  max-width: 181px;
-}
-
 .player-icon {
   font-size: 12px;
+}
+
+.media-bar:hover {
+  cursor: pointer;
+}
+
+.media-bar:hover .white-bar:after
+ {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  transform: translate(0, -35%);
 }
 /* end UTILITY CLASS */
 
@@ -150,7 +175,8 @@ img {
 }
 
 .side-main-container {
-  height: calc(100% - 70px)
+  height: calc(100% - 70px);
+  overflow-y: hidden;
 }
 
 /* Sidebar */
@@ -185,8 +211,8 @@ nav .spotify-logo {
 }
 
 .nav-top > #playlist-nav ul {
+  height: 35vh;
   overflow-y: auto;
-  height: 30vh;
 }
 
 .nav-top > #playlist-nav .playlist-add {
@@ -195,6 +221,10 @@ nav .spotify-logo {
   height: 30px;
   line-height: 30px;
   margin-right: 4px;
+}
+
+.nav-top > #playlist-nav .playlist-create:hover .playlist-add {
+  background-color: white;
 }
 
 .nav-top > #playlist-nav .playlist-add div:first-child {
@@ -245,12 +275,12 @@ nav > #profile .account .profile-icon {
 
 .main-wrapper {
   width: calc(100% - 150px);
-  height: 100%;
+  height: calc(100% - 70px);
 }
 
 /* Barra superiore */
 header {
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(8, 11, 18, .98);
   width: calc(100% - 150px);
   height: 70px;
   align-items: center;
@@ -268,6 +298,12 @@ header .upgrade-button {
   height: 30px;
   line-height: 30px;
   font-size: 12px;
+}
+
+header .upgrade-button:hover {
+  width: 200px;
+  height: 35px;
+  line-height: 35px;
 }
 /* end Barra superiore */
 
@@ -330,17 +366,27 @@ footer > .player .player-left .now-playing-title {
   font-size: 7px;
 }
 
+footer > .player .player-left .now-playing-title:hover {
+  text-decoration: underline;
+}
+
 footer > .player .player-left .now-playing-icons {
   padding-left: 25px;
   vertical-align: 3px;
 }
 
-footer > .player .player-middle .player-commands i.fa-play-circle-o {
+footer > .player .player-middle .player-commands .player-play-icon {
   font-size: 28px;
   vertical-align: middle;
+  height: 30px;
+  width: 39px;
 }
 
-footer > .player .player-middle .media-status .white-bar {
+footer > .player .player-middle .player-commands .player-play-icon:hover {
+  font-size: 30px;
+}
+
+footer > .player .player-middle .media-status .media-bar .white-bar {
   height: 3px;
   width: 65px;
   background-color: white;
@@ -349,7 +395,7 @@ footer > .player .player-middle .media-status .white-bar {
   transform: translate(0, 3.5px);
 }
 
-footer > .player .player-middle .media-status .grey-bar {
+footer > .player .player-middle .media-status .media-bar .grey-bar {
   height: 3px;
   width: 220px;
   background-color: grey;
@@ -358,7 +404,7 @@ footer > .player .player-middle .media-status .grey-bar {
   transform: translate(0, 3.5px);
 }
 
-footer > .player .player-right .white-bar {
+footer > .player .player-right .media-bar .white-bar {
   height: 3px;
   width: 20px;
   background-color: white;
@@ -367,7 +413,12 @@ footer > .player .player-right .white-bar {
   transform: translate(0, 3.5px);
 }
 
-footer > .player .player-right .grey-bar {
+footer > .player .player-middle .media-status .media-bar:hover .white-bar,
+footer > .player .player-right .media-bar:hover .white-bar {
+  background-color: #ADFF2F;
+}
+
+footer > .player .player-right .media-bar .grey-bar {
   height: 3px;
   width: 90px;
   background-color: grey;
