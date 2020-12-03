@@ -51,6 +51,18 @@
   padding-bottom: 20px;
 }
 
+.pad-rig-5 {
+  padding-right: 5px;
+}
+
+.pad-rig-10 {
+  padding-right: 10px;
+}
+
+.pad-rig-15 {
+  padding-right: 15px;
+}
+
 .mar-rig-10 {
   margin-right: 10px;
 }
@@ -69,6 +81,10 @@
 
 .text-bold {
   font-weight: bold;
+}
+
+.font-8 {
+  font-size: 8px;
 }
 
 .font-10 {
@@ -120,6 +136,10 @@ img {
 .item-description {
   max-width: 181px;
 }
+
+.player-icon {
+  font-size: 12px;
+}
 /* end UTILITY CLASS */
 
 .page-wrapper {
@@ -130,7 +150,7 @@ img {
 }
 
 .side-main-container {
-  height: calc(100% - 80px)
+  height: calc(100% - 70px)
 }
 
 /* Sidebar */
@@ -230,10 +250,15 @@ nav > #profile .account .profile-icon {
 
 /* Barra superiore */
 header {
-  background-color: #080B12;
-  height: 80px;
+  background-color: rgba(0, 0, 0, .5);
+  width: calc(100% - 150px);
+  height: 70px;
   align-items: center;
   justify-content: flex-end;
+  right: 0;
+  position: fixed;
+  z-index: 1001;
+  overflow-y: scroll;
 }
 
 header .upgrade-button {
@@ -243,14 +268,14 @@ header .upgrade-button {
   height: 30px;
   line-height: 30px;
   font-size: 12px;
-  position: fixed;
 }
 /* end Barra superiore */
 
 main {
   background-color: #141922;
-  height: calc(100% - 80px);
+  height: 100%;
   overflow-y: auto;
+  margin-top: 70px;
 }
 
 main > .main-navigation li {
@@ -284,7 +309,69 @@ main > #popular .main-item .item-img .start-playing {
 /* Player */
 footer {
   background-color: #282828;
-  height: 80px;
+  height: 70px;
   padding: 10px;
+  position: relative;
+}
+
+footer > .player {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > .player .player-left .now-playing {
+  height: 30px;
+  vertical-align: -5px;
+  padding-right: 5px;
+}
+
+footer > .player .player-left .now-playing-title {
+  font-size: 7px;
+}
+
+footer > .player .player-left .now-playing-icons {
+  padding-left: 25px;
+  vertical-align: 3px;
+}
+
+footer > .player .player-middle .player-commands i.fa-play-circle-o {
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+footer > .player .player-middle .media-status .white-bar {
+  height: 3px;
+  width: 65px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+  transform: translate(0, 3.5px);
+}
+
+footer > .player .player-middle .media-status .grey-bar {
+  height: 3px;
+  width: 220px;
+  background-color: grey;
+  border-radius: 10px;
+  margin-right: 20px;
+  transform: translate(0, 3.5px);
+}
+
+footer > .player .player-right .white-bar {
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 15px;
+  transform: translate(0, 3.5px);
+}
+
+footer > .player .player-right .grey-bar {
+  height: 3px;
+  width: 90px;
+  background-color: grey;
+  border-radius: 10px;
+  transform: translate(0, 3.5px);
 }
 /* end Player */
