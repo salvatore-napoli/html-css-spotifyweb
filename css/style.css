@@ -1,14 +1,14 @@
 /* UTILITY CLASS */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .clearfix::after {
+  clear: both;
   content: '';
   display: table;
-  clear: both;
 }
 
 .left-floated {
@@ -233,8 +233,8 @@ nav .spotify-logo {
   margin-bottom: 20px;
 }
 
-.nav-top > #spotify-nav ul li:first-child:before,
-.nav-top > #spotify-nav ul li:active:before {
+#spotify-nav ul li:first-child:before,
+#spotify-nav ul li:active:before {
   content: '';
   display: block;
   height: 27px;
@@ -245,17 +245,17 @@ nav .spotify-logo {
   transform: translate(0, -4px);
 }
 
-.nav-top > #spotify-nav ul .spotify-nav-img {
+#spotify-nav .spotify-nav-img {
   height: 20px;
   vertical-align: middle;
 }
 
-.nav-top > #playlist-nav ul {
+#playlist-nav ul {
   max-height: 35vh;
   overflow-y: auto;
 }
 
-.nav-top > #playlist-nav .playlist-add {
+#playlist-nav .playlist-add {
   background-color: #A3A3A3;
   width: 30px;
   height: 30px;
@@ -263,11 +263,11 @@ nav .spotify-logo {
   margin-right: 4px;
 }
 
-.nav-top > #playlist-nav .playlist-create:hover .playlist-add {
+#playlist-nav .playlist-create:hover .playlist-add {
   background-color: white;
 }
 
-.nav-top > #playlist-nav .playlist-add div:first-child {
+#playlist-nav .playlist-add div:first-child {
   border-top: 2px solid black;
   width: 40%;
   position: relative;
@@ -275,7 +275,7 @@ nav .spotify-logo {
   left: 2px;
 }
 
-.nav-top > #playlist-nav .playlist-add div:nth-child(2) {
+#playlist-nav .playlist-add div:nth-child(2) {
   border-right: 2px solid black;
   height: 40%;
   position: relative;
@@ -283,25 +283,25 @@ nav .spotify-logo {
   top: 2px;
 }
 
-nav > #profile .app-install:after {
+#profile .app-install:after {
   content: '';
   display: inherit;
   border-bottom: 1px solid white;
   margin: 8px 0;
 }
 
-nav > #profile .app-install .install-icon {
+#profile .app-install .install-icon {
   height: 11px;
   line-height: 10px;
   vertical-align: middle;
   margin-right: 4px;
 }
 
-nav > #profile .account {
+#profile .account {
   font-weight: bold;
 }
 
-nav > #profile .account .profile-icon {
+#profile .account .profile-icon {
   width: 22px;
   height: 22px;
   vertical-align: middle;
@@ -349,19 +349,19 @@ main {
   margin-top: 70px;
 }
 
-main > .main-navigation {
+.main-navigation {
   margin: 0 auto;
 }
 
-main > .main-navigation li {
+.main-navigation li {
   padding-right: 15px;
 }
 
-main > .main-navigation li:first-child {
+.main-navigation li:first-child {
   position: relative;
 }
 
-main > .main-navigation li:first-child:after {
+.main-navigation li:first-child:after {
   content: '';
   display: inline-block;
   border-bottom: 2px solid #ADFF2F;
@@ -380,8 +380,8 @@ main > .main-navigation li:first-child:after {
 /* end Sezione Personalized */
 
 /* Sezione Popular */
-main > #popular .main-item .item-img img,
-main > #popular .main-item .item-img .start-playing {
+#popular .main-item .item-img img,
+#popular .main-item .item-img .start-playing {
   border-radius: 50%;
 }
 /* end Sezione Popular */
@@ -471,14 +471,13 @@ footer > .player-right .options {
     transform: translate(0, -13px);
   }
 
-  main > #popular .item-img img,
-  main > #popular .item-img .start-playing {
+  #popular .item-img img,
+  #popular .item-img .start-playing {
     border-radius: 0;
   }
 
   footer > .player-middle {
     flex-direction: column;
-    flex-grow: .5;
   }
 
 }
@@ -503,3 +502,47 @@ footer > .player-right .options {
   }
 }
 /* end Versione sm */
+
+/* Versione xs */
+@media screen and (max-width: 575px) {
+
+  .hidden-xs,
+  #spotify-nav ul li:first-child:before,
+  #spotify-nav ul li:active:before,
+  nav > #profile .app-install:after {
+   display: none;
+  }
+
+  nav {
+    width: 50px;
+    align-items: center;
+  }
+
+  #spotify-nav .spotify-nav-img {
+    height: 27px;
+  }
+
+  #profile .app-install .install-icon {
+    height: 15px;
+    margin-bottom: 20px;
+    padding-left: 7px;
+  }
+
+  #profile .account .profile-icon {
+    width: 27px;
+    height: 27px;
+  }
+
+  nav .nav-top .spotify-logo {
+    content: url("../img/logo-small.svg");
+  }
+
+  header {
+    width: calc(100% - 50px);
+  }
+
+  .main-wrapper {
+    width: calc(100% - 50px);
+  }
+}
+/* end Versione xs */
