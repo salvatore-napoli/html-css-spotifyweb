@@ -340,14 +340,6 @@ main {
   margin-top: 70px;
 }
 
-.main-navigation {
-  margin: 0 auto;
-}
-
-.main-navigation li {
-  padding-right: 15px;
-}
-
 .main-navigation li:first-child {
   position: relative;
 }
