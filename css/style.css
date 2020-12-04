@@ -390,6 +390,11 @@ footer > .player-left {
   align-items: center;
 }
 
+footer > .player-left,
+footer > .player-right {
+  width: 15%;
+}
+
 footer > .player-left .now-playing {
   height: 30px;
   padding-right: 10px;
