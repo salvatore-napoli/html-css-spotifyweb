@@ -39,10 +39,6 @@
   padding-top: 15px;
 }
 
-.pad-top-20 {
-  padding-top: 20px;
-}
-
 .pad-top-25 {
   padding-top: 25px;
 }
@@ -53,10 +49,6 @@
 
 .pad-rig-5 {
   padding-right: 5px;
-}
-
-.pad-rig-10 {
-  padding-right: 10px;
 }
 
 .pad-rig-15 {
@@ -101,6 +93,10 @@
 
 .font-11 {
   font-size: 11px;
+}
+
+.font-12 {
+  font-size: 12px;
 }
 
 h2 {
@@ -159,10 +155,6 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.player-icon {
-  font-size: 12px;
 }
 
 .total-time {
@@ -333,7 +325,6 @@ header {
 header .upgrade-button {
   border: 1px solid #fff;
   border-radius: 15px;
-  font-size: 12px;
   padding: 10px 30px;
 }
 
@@ -390,24 +381,22 @@ main {
 footer {
   background-color: #282828;
   height: 70px;
-  line-height: 24px;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
 }
 
-footer > .player-left,
-footer > .player-right {
-  width: 15%;
+footer > .player-left {
+  align-items: center;
 }
 
 footer > .player-left .now-playing {
   height: 30px;
+  padding-right: 10px;
 }
 
 footer > .player-left .now-playing-title {
   font-size: 7px;
-  line-height: 0;
 }
 
 footer > .player-left .now-playing-title:hover {
@@ -416,15 +405,13 @@ footer > .player-left .now-playing-title:hover {
 
 footer > .player-left .now-playing-icons {
   padding-left: 25px;
-}
-
-footer > .player-left .now-playing-author {
-  line-height: 2.5;
+  width: 70px;
 }
 
 footer > .player-middle {
   flex-direction: column;
   flex-grow: .5;
+  line-height: 24px;
 }
 
 footer > .player-middle .player-commands {
@@ -475,11 +462,6 @@ footer > .player-right .options {
   #popular .item-img .start-playing {
     border-radius: 0;
   }
-
-  footer > .player-middle {
-    flex-direction: column;
-  }
-
 }
 /* end Versione md */
 
@@ -493,12 +475,8 @@ footer > .player-right .options {
     padding-top: 10px;
   }
 
-  footer > .player .player-left .now-playing-icons {
-    line-height: 100%;
-  }
-
-  footer > .player .player-left .now-playing-icons a {
-    display: block;
+  footer > .player-left .now-playing-icons {
+    width: 10px;
   }
 }
 /* end Versione sm */
@@ -518,6 +496,10 @@ footer > .player-right .options {
     align-items: center;
   }
 
+  nav .nav-top .spotify-logo {
+    content: url('../img/logo-small.svg');
+  }
+
   #spotify-nav .spotify-nav-img {
     height: 27px;
   }
@@ -533,16 +515,16 @@ footer > .player-right .options {
     height: 27px;
   }
 
-  nav .nav-top .spotify-logo {
-    content: url("../img/logo-small.svg");
-  }
-
   header {
     width: calc(100% - 50px);
   }
 
   .main-wrapper {
     width: calc(100% - 50px);
+  }
+
+  footer > .player-left .now-playing-icons {
+    padding-left: 10px;
   }
 }
 /* end Versione xs */
