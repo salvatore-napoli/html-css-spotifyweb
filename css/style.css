@@ -172,6 +172,7 @@ h2 {
   background-color: #c1c1c1;
   height: 3px;
   border-radius: 10px;
+  position: relative;
 }
 
 .perc-20 {
@@ -470,10 +471,6 @@ footer > .player-right .options {
 
   .main-item:nth-child(n+3) {
     padding-top: 10px;
-  }
-
-  footer > .player-left .now-playing-icons {
-    width: 10px;
   }
 }
 /* end Versione sm */
