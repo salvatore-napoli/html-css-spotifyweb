@@ -294,5 +294,26 @@
       <!-- end Player -->
 
     </div>
+    <script type="text/javascript">
+      document.body.style.display = 'none';
+      window.onload = function () {
+        var conf = window.confirm('Want to enter?');
+        if (conf === true) {
+          window.prompt('Insert your email address'),
+          window.alert('Welcome to Spotify'),
+          document.body.style.display = 'block';
+        }
+        else {
+          document.body.style.display = 'block';
+          document.body.innerHTML = '<span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">You chose not to enter</span>';
+        }
+      }
+
+      var upgradeButton = document.getElementsByClassName('upgrade-button')[0];
+      upgradeButton.onclick = function upgraded () {
+        upgradeButton.innerHTML = 'UPGRADED!';
+        upgradeButton.style.color = 'green';
+      }
+    </script>
   </body>
 </html>
